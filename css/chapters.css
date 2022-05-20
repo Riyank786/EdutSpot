@@ -1,0 +1,120 @@
+.content .body-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  background-color: transparent;
+  overflow: auto;
+  height: fit-content;
+}
+
+.body-wrapper .card {
+  width: 320px;
+  height: 100px;
+
+  background-color: white;
+  border-radius: 17px;
+  box-shadow: 2px 2px 2px rgba(255, 255, 255, 0.4);
+
+  margin: 7px;
+  padding: 12px;
+
+  display: flex;
+}
+
+.body-wrapper .card .chapter-image {
+  width: 40%;
+  height: 100%;
+}
+
+.chapter-image img {
+  border-radius: 12px;
+}
+
+.chapter-desc {
+  width: 60%;
+  height: 100%;
+  border-radius: 12px;
+  padding-left: 12px;
+  position: relative;
+}
+.chapter-desc button {
+  position: absolute;
+  right: 7px;
+  bottom: 7px;
+  background-color: #4dc591;
+  color: white;
+  padding: 2px 5px;
+  border: none;
+  outline: none;
+  font-size: 15px;
+  border-radius: 7px;
+  cursor: pointer;
+  font-family: "Baloo Bhai 2", sans-serif;
+}
+
+.breadcrumbs {
+  border: 1px solid #cbd2d9;
+  border-radius: 17px;
+  margin-left: 5px;
+  display: inline-flex;
+  overflow: hidden;
+  margin-bottom: 5px;
+}
+
+.breadcrumbs__item {
+  background: #fff;
+  color: #333;
+  outline: none;
+  padding: 0.2em 0.75em 0.2em 1.25em;
+  position: relative;
+  text-decoration: none;
+  transition: all 0.2s linear;
+}
+
+.breadcrumbs__item:hover:after,
+.breadcrumbs__item:hover {
+  background: #edf1f5;
+}
+
+.breadcrumbs__item:focus:after,
+.breadcrumbs__item:focus,
+.breadcrumbs__item.is-active:focus {
+  background: #323f4a;
+  color: #fff;
+}
+
+.breadcrumbs__item:after,
+.breadcrumbs__item:before {
+  background: white;
+  bottom: 0;
+  clip-path: polygon(50% 50%, -50% -50%, 0 100%);
+  content: "";
+  left: 100%;
+  position: absolute;
+  top: 0;
+  transition: all 0.2s linear;
+  width: 1em;
+  z-index: 1;
+}
+
+.breadcrumbs__item:before {
+  background: #cbd2d9;
+  margin-left: 1px;
+}
+
+.breadcrumbs__item:last-child {
+  border-right: none;
+}
+
+.breadcrumbs__item.is-active {
+  background: #323f4a;
+  color: white;
+}
+
+
+@media (max-width: 450px) {
+  .content .body-wrapper{
+    flex-direction: row;
+  }
+}

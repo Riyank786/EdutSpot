@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EduSpot</title>
+
+    <script type="module" src="./js/authenticateUser.js"></script>
+
+    <link rel="stylesheet" href="./css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> -->
+  </head>
+  <body>
+    <div class="main-container">
+      <nav class="sidebar">
+        <div id="closeSideBar" onclick="closeSideBar()">&times;</div>
+        <ul class="nav-links">
+          <li id="logo-wrapper">
+            <h2>EduSpot</h2>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="content">
+        <div class="header">
+          <div class="header_left">
+            <i class="fa fa-bars" id="openMenuIcon" onclick="openSideMenu()"></i>
+            <h2 class="title">Welcome to EduSpot</h2>
+          </div>
+
+          <div class="header_right">
+            <div class="header_right_top">
+              <div class="profile">
+                <i class="fa fa-user-circle-o"></i>
+                <h6 id="userName"></h6>
+                <div class="drop-down">
+                  <div class="drop-down-content" onclick="logOutUser()"><i class="fa fa-sign-out"></i> Sign Out</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="body-wrapper">
+          <div class="body-wrapper_heading-title body-content">
+            <div>
+              <small class="highlight-tag" style="font-size: 1.5vw;"><i class="fa fa-book"></i> Best way to learn from anywhwere</small>
+              <h1>Learn with <br> fun on <span class="highlight">any <br> schedule</span></h1>
+            </div>
+          </div>
+          <div class="body-wrapper_image-container body-content">
+            <img src="./images/home_cover.png" alt="EduSpot">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+    <script src="./js/http.interceptor.js"></script>
+    <script src="./utils/userSettings.js"></script>
+    <script src="./utils/getData.js"></script>
+    <script src="./utils/sideMenuControls.js"></script>
+    <script src="./js/index.js"></script>
+    </script>
+  </body>
+</html>
