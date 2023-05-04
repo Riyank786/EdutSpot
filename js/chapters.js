@@ -3,7 +3,7 @@ url = new URL(url);
 let subject = url.searchParams.get("subject");
 let cls = url.searchParams.get("class");
 
-let urls = ` https://edu-spot.herokuapp.com/chapter?class=${cls}&subject=${subject}`;
+let urls = ` http://localhost:3000/chapter?class=${cls}&subject=${subject}`;
 function httpGet(theUrl) {
   var xmlHttp = new XMLHttpRequest();
   xmlHttp.open("GET", theUrl, false);

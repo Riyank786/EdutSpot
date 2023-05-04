@@ -66,7 +66,7 @@ window.onclick = function (event) {
 
 // ------------------------ post request to add question ------------------------ //
 async function addQuestionsToDb(data) {
-  let url = " https://edu-spot.herokuapp.com/addQuestion";
+  let url = " http://localhost:3000/addQuestion";
   var xhr = new XMLHttpRequest();
   xhr.open("POST", url, true);
   xhr.setRequestHeader("Content-Type", "application/json");
@@ -113,7 +113,7 @@ async function addQuestion() {
 // ------------------------ post request to add answer ------------------------ //
 async function addAnswerToDb(data) {
   
-  let url = " https://edu-spot.herokuapp.com/addAnswer";
+  let url = " http://localhost:3000/addAnswer";
   var xhr = new XMLHttpRequest();
   xhr.open("POST", url, true);
   xhr.setRequestHeader("Content-Type", "application/json");
@@ -210,7 +210,7 @@ function getTimeDiff(timeStart){
 }
 
 function setQuestions(videoId){
-  let url = ` https://edu-spot.herokuapp.com/fetchQnA?videoId=${videoId}`;
+  let url = ` http://localhost:3000/fetchQnA?videoId=${videoId}`;
   let questions = JSON.parse(httpGet(url));
 
   openQuestions('imp-que-wrapper', 'imp-que-detail-page')
@@ -328,7 +328,7 @@ function hideVideoList(){
 }
 
 function getContentData(){
-  let queURL = ` https://edu-spot.herokuapp.com/content?class=${cls}&subject=${subject}&chapterName=${chapter}`;
+  let queURL = ` http://localhost:3000/content?class=${cls}&subject=${subject}&chapterName=${chapter}`;
   let data = JSON.parse(httpGet(queURL));
   return data;
 }

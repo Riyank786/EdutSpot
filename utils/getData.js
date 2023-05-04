@@ -11,7 +11,7 @@ function httpGet(theUrl) {
 }
 // getting all classes
 function getClasses() {
-  let url = " https://edu-spot.herokuapp.com/";
+  let url = " http://localhost:3000/";
   let classes = [];
   let data = JSON.parse(httpGet(url));
   data.forEach((el) => {
@@ -22,7 +22,7 @@ function getClasses() {
 }
 
 function getSubjects(cls){
-  let url = ` https://edu-spot.herokuapp.com/subject?class=${cls}`;
+  let url = ` http://localhost:3000/subject?class=${cls}`;
   let subjects = [];
   let data = JSON.parse(httpGet(url));
   data.forEach((el) => {

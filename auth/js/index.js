@@ -12,7 +12,7 @@ function showSignup(){
 // -------------------------------- signup handling -------------------------------- // 
 function signup(data){
   
-  const signupURL = " https://edu-spot.herokuapp.com/user/userSingup";
+  const signupURL = " http://localhost:3000/user/userSingup";
 
   const xhr = new XMLHttpRequest();
   xhr.open("POST", signupURL, true);
@@ -72,7 +72,7 @@ function signupUser(){
 // -------------------------------- login handling -------------------------------- // 
 function login(data){
 
-  const loginURL = " https://edu-spot.herokuapp.com/user/userLogin";
+  const loginURL = " http://localhost:3000/user/userLogin";
 
   const xhr = new XMLHttpRequest();
   xhr.open("POST", loginURL, true);
@@ -91,7 +91,7 @@ function login(data){
         let response = JSON.parse(xhr.response);
         localStorage.setItem("Authorization", response.token);
         localStorage.setItem("UserInfo", JSON.stringify(response.data));
-        window.location.href = "/EdutSpot/";
+        window.location.href = "/client/";
       } 
     }
   };

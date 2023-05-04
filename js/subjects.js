@@ -4,7 +4,7 @@ let cls = url.searchParams.get("class");
 
 let subjectList = [];
 
-let urls = ` https://edu-spot.herokuapp.com/subject?class=${cls}`;
+let urls = ` http://localhost:3000/subject?class=${cls}`;
 function httpGet(theUrl) {
   var xmlHttp = new XMLHttpRequest();
   xmlHttp.open("GET", theUrl, false);
